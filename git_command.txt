@@ -21,3 +21,11 @@ git clone url
 git rm -rf ---cached .
 
 git add .
+
+##Pulling changes from a remote repository
+##git pull is a convenient shortcut for completing both git fetch and git merge in the same command:
+# Grabs online updates and merges them with your local work
+$ git pull remotename branchname
+
+##if you decide to quit the merge, you can use git merge --abort to take the branch back to where it was in before you pulled.
+$ git merge --abort
