@@ -1,1 +1,2 @@
-# genetic-cpp-202012
+# Cpp
+Dương Thị Mai Nga
