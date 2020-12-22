@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     string str1 ("Hello");
-    string str2 = "world";
+    string str2 = "world"; //ko nên dùng, nếu kiểu dl cơ bản thì ok
     string s;
     s = str1 + str2;
     cout << "The string " << s << endl;

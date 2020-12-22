@@ -1,0 +1,3 @@
+{ "happy": true, "pi": 3.141, "sex": "M" }
+{ "happy": false, "pi": 3.141, "sex": "F"  }
+{ "happy": false, "pi": 3.141, "sex": "M"  }
