@@ -1,7 +1,7 @@
 #git commands
 ##init information
-git config --global user.email "lvminh2k@gmail.com"
-git config --global user.name "Van-Minh Le"
+git config --global user.email "dtmnga@cit.udn.vn"
+git config --global user.name "Nga Dương"
 ##get status
 git status
 ##report to git that we have add some changes
@@ -31,3 +31,6 @@ $ git pull
 
 ##if you decide to quit the merge, you can use git merge --abort to take the branch back to where it was in before you pulled.
 $ git merge --abort
+
+##terminate a command
+$ ctrl c
