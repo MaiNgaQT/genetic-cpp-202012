@@ -91,4 +91,5 @@ int EmployeeData::Delete (int ssn){
     // int position = find(_data.begin(), _data.end(), ssn);
     // cout << "Position of " << ssn << " is " << position;
     // _data.erase(position);
+    return 0;
 }

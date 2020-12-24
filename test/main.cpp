@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "libs/json.hpp"
 using namespace std;
 using nlohmann::json;
@@ -35,15 +36,17 @@ int main(){
     printf ("The value of -3.1416 is %lf\n", fabs (-3.1416));
 
     //test lambda expression
-    int m = 0;
-   int n = 0;
+//     int m = 0;
+//    int n = 0;
     
-   auto func = [&, n] (int a) mutable
-   {
-       m = ++n + a;
-   };
+//    auto func = [&, n] (int a) mutable
+//    {
+//        m = ++n + a;
+//    };
     
-   func(4);
-   cout << "Test lambda expression: m = " << m  << ", n = " << n << endl;
+//    func(4);
+//    cout << "Test lambda expression: m = " << m  << ", n = " << n << endl;
+string str;
+cout << str.max_size();
     return 0;
 }
