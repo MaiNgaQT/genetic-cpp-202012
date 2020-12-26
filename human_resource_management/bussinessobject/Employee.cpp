@@ -13,6 +13,9 @@ Employee::Employee(int id, string fname, string mInit, string lName, long ssn, s
     SuperSSN = superSSN;
     DNO = dno;
 }
+void Employee::SetBDate(string bDate){
+    BDate = bDate;
+}
 /*  * @brief Function converts an Employee object to string
     * Function converts an Employee object to string
     * @return a string

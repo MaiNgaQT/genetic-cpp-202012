@@ -8,6 +8,7 @@ using namespace std;
 
 void displayEmployeeData (EmployeeData eData);
 void insertEmployee (EmployeeData eData, string fileName);
+int updateEmployee (EmployeeData eData, string fileName);
 
 int main(){
     //read Employee data
@@ -17,8 +18,10 @@ int main(){
     displayEmployeeData(eData);
 
     //insert an Employee
-    insertEmployee(eData, fileName);
+    //insertEmployee(eData, fileName);
 
+    //update Employee's birthday
+    updateEmployee(eData, fileName);
     //delete an Employee
     
     

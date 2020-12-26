@@ -41,7 +41,7 @@ EmployeeData::EmployeeData(string fileName){
         cout << "Can not open file";
     }
     
-    
+    MaxId = _data[_data.size() - 1].GetId();
     inFile.close();
 }
 /*  * @brief Function returns an Employee object at a position inside the list inside EmployeeData

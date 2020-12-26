@@ -38,12 +38,31 @@ void insertEmployee (EmployeeData eData, string fileName){
     // displayEmployeeData(eData);
     eData.ExportToFile(fileName);
 }
-vodi deleteEmployee (EmployeeData eData, string fileName){
-    cout << "*** INSERT AN EMPLOYEE ***" << endl;
-    int inSSN;
-    cout << "Enter the Employee SSN you want to delete: ";
-    cin >> inSSN;
-    eData.Delete (inSSN);
-    displayEmployeeData(eData);
+void deleteEmployee (EmployeeData eData, string fileName){
+    // cout << "*** INSERT AN EMPLOYEE ***" << endl;
+    // int inSSN;
+    // cout << "Enter the Employee SSN you want to delete: ";
+    // cin >> inSSN;
+    // eData.Delete (inSSN);
+    // displayEmployeeData(eData);
     //eData.ExportToFile("EmployeeData.data");
+}
+int updateEmployee (EmployeeData eData, string fileName){
+    cout << "UPDATE AN EMPLOYEE " << endl;
+    int id;
+    cout << "Enter the Employee ID you want to update: ";
+    cin >> id;
+    string bDate;
+    cout << "Enter the new Birthday: ";
+    cin >> bDate;
+    for_each(eData._data.begin(), eData._data.end(), [id, bDate](Employee& e) 
+                { 
+                    if (e.GetId() == id){
+                        e.SetBDate(bDate);
+                    }
+                }
+    );
+    //displayEmployeeData(eData);
+    eData.ExportToFile("EmployeeData.data");
+    return 0;
 }

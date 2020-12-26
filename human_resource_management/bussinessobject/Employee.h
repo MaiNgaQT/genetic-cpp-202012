@@ -21,5 +21,6 @@ public:
     string ToString(); //convert a object to string
     json ToJson();  //convert a object to json
     int GetId();
+    void SetBDate(string);
 };
 #endif

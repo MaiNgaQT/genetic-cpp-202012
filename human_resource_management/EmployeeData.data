@@ -2,6 +2,6 @@
 {"Address":"dong ha","BDate":"1983-06-02","DNO":4,"FName":"Nga","Id":2,"LName":"Duong","MInit":"Mai","SSN":222333444,"Salary":2000,"Sex":"F","SuperSSN":111222333}
 {"Address":"dong ha","BDate":"1984-12-04","DNO":5,"FName":"Ngoc","Id":3,"LName":"Duong","MInit":"Mai","SSN":333444555,"Salary":5000,"Sex":"F","SuperSSN":111222333}
 {"Address":"da nang","BDate":"1987-09-13","DNO":3,"FName":"Nga","Id":4,"LName":"Duong","MInit":"Ngoc","SSN":222333444,"Salary":4000,"Sex":"m","SuperSSN":111222333}
-{"Address":"hue","BDate":"1985-09-19","DNO":4,"FName":"huong","Id":5,"LName":"nguyen","MInit":"nam","SSN":444555666,"Salary":6000,"Sex":"m","SuperSSN":111222333}
+{"Address":"hue","BDate":"2014-09-07","DNO":4,"FName":"huong","Id":5,"LName":"nguyen","MInit":"nam","SSN":444555666,"Salary":6000,"Sex":"m","SuperSSN":111222333}
 {"Address":"quang nam","BDate":"2002-01-19","DNO":5,"FName":"nam","Id":6,"LName":"huong","MInit":"hoa","SSN":333333333,"Salary":2000,"Sex":"f","SuperSSN":111222333}
 {"Address":"da nang","BDate":"1980-07-08","DNO":5,"FName":"jon","Id":7,"LName":"bee","MInit":"smith","SSN":111111111,"Salary":4000,"Sex":"m","SuperSSN":222222222}
