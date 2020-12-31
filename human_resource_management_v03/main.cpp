@@ -8,16 +8,17 @@
 #include "ui/TableUI.h"
 #include "ui/EmployeeUI.h"
 using namespace std;
+
 int main(){
 
-    // read Employee data from file
+    //read all data from file
     string employeeFile ("EmployeeData.data"); EmployeeData eData(employeeFile);
-    // read Department data from file
     // string departmentFile ("DepartmentData.data"); DepartmentData dData (departmentFile);
+    
     bool isContinue = true;
     bool isTableContinue;
     int mainChoice, tableChoice;
-    TableData *tData;
+    TableData *tData = &eData;
     while (isContinue){
         cout << "*** EMPLOYEE MANAGEMENT APPLICATION ***" << endl;
         cout << "1. Manupulate EMPLOYEE Table." << endl;
@@ -46,13 +47,15 @@ int main(){
                 if (tableChoice == -1)
                     break;
                 else if (tableChoice == 1){
-                    // eData.ReadFileToObject(employeeFile);
-                    // eData.DisplayData();
                     tData = &eData;
                     employeeUI.ReadData(tData, employeeFile);
                 }else if (tableChoice == 2){
                     TableData *t = &eData;
                     employeeUI.Insert(t, employeeFile);
+                }else if (tableChoice == 3){
+                    employeeUI.Update(tData, employeeFile);
+                }else if (tableChoice == 4){
+                    employeeUI.Delete(tData, employeeFile);
                 }
             }
             break;

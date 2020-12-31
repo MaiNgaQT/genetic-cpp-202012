@@ -25,6 +25,9 @@ vector<string> TableData::ReadFileToJson(string fileName){
 int TableData::ReadFileToObject(string){
     return 0;
 }
+int TableData::FindObjectPosition(string attribute, int value){
+    return 0;
+}
 //add a Table object to the end of the list inside TableData
 int TableData::PushBack(Table * t){
     //if e.id = 5, then maxId = 5
@@ -41,6 +44,15 @@ Table* TableData::Get(int i){
 int TableData::GetSize(){
     return _data.size();
 } 
+//update an Employee inside Employee list
+int TableData::Update(int index, Table* t){
+    _data[index] = t;
+    return 0;
+}
+int TableData::Delete(int index){
+    _data.erase(_data.begin() + index );
+    return 0;
+}
 //show all object of the list inside TableData
 void TableData::DisplayData(){
     for (auto i : _data){

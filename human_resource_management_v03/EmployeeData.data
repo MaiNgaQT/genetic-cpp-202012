@@ -3,9 +3,8 @@
 {"Address":"3321 Castle - Spring - TX","BDate":"1968-07-19","DNO":4,"FName":"Alicia","Id":3,"LName":"Zelaya","MInit":"J","SSN":999888777,"Salary":2500,"Sex":"F","SuperSSN":987654321}
 {"Address":"921 Berry - Bellaire - TX","BDate":"1941-06-20","DNO":4,"FName":"Jennifer","Id":4,"LName":"Wallace","MInit":"S","SSN":987654321,"Salary":4300,"Sex":"F","SuperSSN":888666555}
 {"Address":"975 Fire Oak - Humble - TX","BDate":"1962-09-15","DNO":5,"FName":"Ramesh","Id":5,"LName":"Narayan","MInit":"K","SSN":666884444,"Salary":3800,"Sex":"M","SuperSSN":333444555}
-{"Address":"5631 Rice - Houston - TX","BDate":"1972-07-31","DNO":5,"FName":"Joyce","Id":6,"LName":"English","MInit":"A","SSN":453453453,"Salary":2500,"Sex":"F","SuperSSN":333444555}
+{"Address":"VKU","BDate":"1972-07-31","DNO":5,"FName":"HHH","Id":6,"LName":"English","MInit":"VKU","SSN":453453453,"Salary":2500,"Sex":"F","SuperSSN":333444555}
 {"Address":"930 Dallas - Houston - TX","BDate":"1969-03-29","DNO":4,"FName":"Ahmad","Id":7,"LName":"Jabbar","MInit":"V","SSN":987987987,"Salary":2500,"Sex":"M","SuperSSN":987654321}
 {"Address":"450 Stone - Houston - TX","BDate":"1937-11-10","DNO":1,"FName":"James","Id":8,"LName":"Borg","MInit":"E","SSN":888666555,"Salary":5500,"Sex":"M","SuperSSN":-1}
 {"Address":"123 da nang","BDate":"1983-06-02","DNO":2,"FName":"Nga","Id":9,"LName":"Duong","MInit":"Maoi","SSN":999999999,"Salary":2000,"Sex":"f","SuperSSN":123456789}
 {"Address":"da nang","BDate":"1983","DNO":4,"FName":"AAA","Id":10,"LName":"CCC","MInit":"BBB","SSN":888888888,"Salary":3000,"Sex":"m","SuperSSN":999999999}
-{"Address":"hue","BDate":"hue","DNO":3,"FName":"DDD","Id":11,"LName":"FFF","MInit":"EEE","SSN":777777777,"Salary":4000,"Sex":"f","SuperSSN":888888888}

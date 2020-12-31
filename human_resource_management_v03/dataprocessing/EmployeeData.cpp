@@ -31,19 +31,12 @@ EmployeeData::EmployeeData(string fileName){
     }
     return 0;
  }
-// //write all data in EmployeeData to file
-// int ExportToFile(string){
-//     return 0;
-// }        
-//  //return id of Employee       
-// int FindSSNByName(string name){
-//     return 0;
-// }        
-// //retrun list of Employee according to id of management
-// // vector<Employee> GetListEmployee(int id){} 
-
-
-// int ExportToFile(string);        //write all data in TableData to file
-// int Delete(int position);        //delete an Table inside TableData
-// int Update(int position, Table); //update an Table inside TableData
-// int FindById(int id);            //return position of Table
+int EmployeeData::FindObjectPosition(string attribute, int value){
+    vector<Table*>::iterator it = find_if(_data.begin(), _data.end(), 
+                    [attribute, value](Table *t) {
+                        json j = t->ToJson();
+                        return j[attribute] == value;
+                    });
+    if (it == _data.end()) return -1;
+    return it - _data.begin();
+}

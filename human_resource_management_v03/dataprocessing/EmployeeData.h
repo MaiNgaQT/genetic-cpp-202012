@@ -21,7 +21,7 @@ public:
     // int ExportToFile (string);//write all data in TableData to file
     // int Delete (int position);//delete an Table inside TableData
     // int Update (int position, Table); //update an Table inside TableData
-    // int FindById(int id); //return position of Table
+    int FindObjectPosition(string attribute, int value); //return position of employee object inside TableData
     
 };
 #endif

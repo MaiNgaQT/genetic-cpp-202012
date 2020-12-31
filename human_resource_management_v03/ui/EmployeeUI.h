@@ -7,9 +7,9 @@ using namespace std;
 class EmployeeUI : public TableUI{
 public:
     EmployeeUI();
-    void ReadData(TableData*, string);
-    void Update();
-    void Insert(TableData*, string);
-    void Delete();
+    int ReadData(TableData*, string);
+    int Update(TableData*, string);
+    int Insert(TableData*, string);
+    int Delete(TableData*, string);
 };
 #endif

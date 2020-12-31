@@ -24,7 +24,9 @@ public:
     virtual int ReadFileToObject(string);
     // virtual int Delete (int position);//delete an Table inside TableData
     // virtual int Update (int position, Table); //update an Table inside TableData
-    // virtual int FindById(int id); //return position of Table
+    virtual int FindObjectPosition(string attribute, int value); //return position of Table
+    int Update(int, Table*);//update an Employee inside Employee list
+    int Delete(int);//delete an Employee inside Employee list
     
 };
 #endif

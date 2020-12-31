@@ -6,10 +6,10 @@
 using namespace std;
 class TableUI{
 public:
-    virtual void ReadData(TableData*, string) = 0;
-    virtual void Update() = 0;
-    virtual void Insert(TableData*, string) = 0;
-    virtual void Delete() = 0;
+    virtual int ReadData(TableData*, string) = 0;
+    virtual int Update(TableData*, string) = 0;
+    virtual int Insert(TableData*, string) = 0;
+    virtual int Delete(TableData*, string) = 0;
     //show all object of the list inside TableData
 
 
