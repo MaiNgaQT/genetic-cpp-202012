@@ -1,0 +1,1 @@
+g++ main.cpp businessobject/Employee.cpp businessobject/Department.cpp dataprocessing/EmployeeData.cpp dataprocessing/TableData.cpp dataprocessing/DepartmentData.cpp -o main.exe

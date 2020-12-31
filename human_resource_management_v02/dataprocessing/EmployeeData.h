@@ -12,5 +12,6 @@ public:
     // Employee Get (int i);//return an employee object at postion i
     int GetSize ();
     Employee* GetPointer(int i);
+    int Export(string fileName);
 };
 #endif

@@ -1,8 +1,9 @@
 #include "Employee.h"
+using namespace std;
 Employee::Employee(){}
-Employee::Employee(int id, string fname, string mInit, string lName, long ssn, string bDate, string address, char sex, int salary, long superSSN, int dno){
+Employee::Employee(int id, string fName, string mInit, string lName, long ssn, string bDate, string address, char sex, int salary, long superSSN, int dno){
     Id = id;
-    FName = fname;
+    FName = fName;
     MInit = mInit;
     LName = lName;
     SSN = ssn;
@@ -13,10 +14,6 @@ Employee::Employee(int id, string fname, string mInit, string lName, long ssn, s
     SuperSSN = superSSN;
     DNO = dno;
 }
-/*  * @brief Function converts an Employee object to string
-    * Function converts an Employee object to string
-    * @return a string
-*/
 string Employee::ToString(){
     string s;
     s += "{Id: " + to_string(Id) + ", ";
@@ -34,12 +31,6 @@ string Employee::ToString(){
     s += "DNO: " + to_string(DNO) + "}";
     return s;
 }
-/*  * @brief Function converts an Employee object to json
-    * Function converts an Employee object to json
-    * @return a json object
-    * Example: Employee e(4, "Nga", "Mai", "Duong", 111222333, "1983-06-02", "Quang Tri", 'F', 2000, 222333444, 4)
-    * -> {"Id": 4, "FName": "Nga", "MInit": "Mai", "LName": "Duong", "SSN": 111222333, "BDate": "1983-06-02", "Sex": "F", "Salary": 2000, "SuperSSN": 222333444, "DNO": 4}
-*/
 json Employee::ToJson(){
     json j;
     j["Id"] = Id;
@@ -56,27 +47,71 @@ json Employee::ToJson(){
     j["DNO"] = DNO;
     return j;
 }
+
 int Employee::GetId(){
     return Id;
 }
 string Employee::GetFName(){
     return FName;
 }
+string Employee::GetMInit(){
+    return MInit;
+}
 string Employee::GetLName(){
     return LName;
 }
-int Employee::GetSSN(){
+long Employee::GetSSN(){
     return SSN;
 }
-int Employee::GetSuperSSN(){
+string Employee::GetBDate(){
+    return BDate;
+}
+string Employee::GetAddress(){
+    return Address;
+}
+char Employee::GetSex(){
+    return Sex;
+}
+int Employee::GetSalary(){
+    return Salary;
+}
+long Employee::GetSuperSSN(){
     return SuperSSN;
 }
-void Employee::SetBDate(string bDate){
-    BDate = bDate;
+int Employee::GetDNO(){
+    return DNO;
+}
+
+void Employee::SetID(int id){
+    Id = id;
 }
 void Employee::SetFName(string fName){
     FName = fName;
 }
+void Employee::SetMInit(string mInit){
+    MInit = mInit;
+}
+void Employee::SetLNname(string lName){
+    LName = lName;
+}
+void Employee::SetSSN(long ssn){
+    SSN = ssn;
+}
+void Employee::SetBDate(string bDate){
+    BDate = bDate;
+}
 void Employee::SetAddress(string address){
     Address = address;
+}
+void Employee::SetSex(char sex){
+    Sex = sex;
+}
+void Employee::SetSalary(int salary){
+    Salary = salary;
+}
+void Employee::SetSuperSSN(long supperSSN){
+    SuperSSN = supperSSN;
+}
+void Employee::SetDNO(int dno){
+    DNO = dno;
 }

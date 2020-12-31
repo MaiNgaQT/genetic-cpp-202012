@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 #include "../bussinessobject/Employee.h"
 #include "../dataprocessing/EmployeeData.h"
 #include "../libs/json.hpp"
@@ -39,30 +40,57 @@ void insertEmployee (EmployeeData eData, string fileName){
     eData.ExportToFile(fileName);
 }
 void deleteEmployee (EmployeeData eData, string fileName){
-    // cout << "*** INSERT AN EMPLOYEE ***" << endl;
-    // int inSSN;
-    // cout << "Enter the Employee SSN you want to delete: ";
-    // cin >> inSSN;
-    // eData.Delete (inSSN);
-    // displayEmployeeData(eData);
-    //eData.ExportToFile("EmployeeData.data");
+    cout << "*** DELETE AN EMPLOYEE ***" << endl;
+    int id;
+    cout << "Enter the Employee id you want to delete: ";
+    cin >> id;
+    int position = eData.FindById(id);
+    if (position == -1)
+        cout << "Invalid Employee ID" << endl;
+    else{
+        eData.Delete(position);
+        eData.ExportToFile(fileName);
+        cout << "Successfully Deleted" << endl;
+    }
+
 }
 int updateEmployee (EmployeeData eData, string fileName){
     cout << "UPDATE AN EMPLOYEE " << endl;
     int id;
+    string fName, mInit, lName;
+    long ssn;
+    string bDate, address;
+    char sex;
+    int salary;
+    long superSSN;
+    int dno;
+    char delim = '\n';
     cout << "Enter the Employee ID you want to update: ";
     cin >> id;
-    string bDate;
-    cout << "Enter the new Birthday: ";
-    cin >> bDate;
-    for_each(eData._data.begin(), eData._data.end(), [id, bDate](Employee& e) 
-                { 
-                    if (e.GetId() == id){
-                        e.SetBDate(bDate);
-                    }
-                }
-    );
-    //displayEmployeeData(eData);
-    eData.ExportToFile("EmployeeData.data");
+    int i = eData.FindById(id);
+    if (i == -1)
+        cout << "Invalid Employee ID" << endl;
+    else{
+        cout << "Enter NEW VALUES (PRESS ENTER if the value not changed):" << endl;
+        cout << "New First Name: "; cin.ignore(); getline(cin, fName, delim); 
+        cout << "New Middle Init: "; cin.ignore(); getline(cin, mInit, delim); 
+        // cout << "New Last Name: "; cin >> lName;
+        // cout << "New SSN: "; cin >> ssn;
+        // cout << "New Birthday: "; cin >> bDate;
+        cout << "New Address: "; cin.ignore(); getline(cin, address, delim); 
+        // cout << "New Sex: "; cin >> sex;
+        // cout << "New Salary: "; cin >> salary;
+        // cout << "New Super SSN: "; cin >> superSSN;
+        // cout << "New DNO: "; cin >> dno;
+        
+        Employee e = eData.Get(i);
+        if (!fName.empty()) e.SetFName(fName);
+        // if (!mInit.empty()) e.SetMInit(mInit);
+        if (!address.empty()) e.SetAddress(address);
+        eData.Update(i, e);    
+        eData.ExportToFile(fileName);
+        cout << "Successfully Updated" << endl;
+    }
+    
     return 0;
 }

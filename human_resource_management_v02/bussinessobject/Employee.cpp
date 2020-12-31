@@ -1,4 +1,5 @@
 #include "Employee.h"
+#include<fstream>
 Employee::Employee(){}
 Employee::Employee(int id, string fname, string mInit, string lName, long ssn, string bDate, string address, char sex, int salary, long superSSN, int dno){
     Id = id;

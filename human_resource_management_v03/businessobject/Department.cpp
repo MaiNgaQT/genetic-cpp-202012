@@ -1,6 +1,7 @@
 #include "Department.h"
 Department::Department(){}
-Department::Department(string dName, int dNumber, int mgrSsn, string mgrStartDate){
+Department::Department(int id, string dName, int dNumber, int mgrSsn, string mgrStartDate){
+    Id = id;
     DName = dName;
     DNumber = dNumber;
     MGRSSN = mgrSsn;
@@ -9,20 +10,16 @@ Department::Department(string dName, int dNumber, int mgrSsn, string mgrStartDat
 string Department::ToString(){
     string s;
     s = "{";
+    s += "Id: " + to_string(Id) + ", ";
     s += "DName: " + DName + ", ";
     s += "DNumber: " + to_string(DNumber) + ", ";
     s += "MGRSSN: " + to_string(MGRSSN) + ", ";
     s += "MGRStartDate: " + MGRStartDate + "}";
     return s;
 }
-json Department::ToJson(){
-    json j;
-    j["DName"] = DName;
-    j["DNumber"] = DNumber;
-    j["MGRSSN"] = MGRSSN;
-    j["MGRStartDate"] = MGRStartDate;
-    return j;
-}
 int Department::getDNumber(){
     return DNumber;
+}
+int Department::GetId(){
+    return Id;
 }

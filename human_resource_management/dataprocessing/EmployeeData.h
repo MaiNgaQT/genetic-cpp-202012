@@ -4,8 +4,8 @@
 #include "../bussinessobject/Employee.h"
 class EmployeeData{
 public: 
-    int MaxId;
-public:
+    int _maxId;
+private:
     vector<Employee> _data;
 public:
     EmployeeData ();
@@ -15,6 +15,10 @@ public:
     Employee Get (int i);//return an employee object at postion i
     int GetSize ();
     int ExportToFile (string);//write all data in EmployeeData to file
-    int Delete (int ssn);//delete an Employee in EmployeeData
+    int Delete (int position);//delete an Employee inside EmployeeData
+    int Update (int position, Employee); //update an Employee inside EmplpoyeeData
+    int FindById(int id); //return position of Employee
+    int FindSSNByName(string name);//return id of Employee
+    vector<Employee> GetListEmployee(int id);//retrun list of Employee according to id of management
 };
 #endif

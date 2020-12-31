@@ -1,3 +1,4 @@
+#include<fstream>
 #include "EmployeeData.h"
 EmployeeData::EmployeeData() (
     _maxId = 0;
@@ -9,4 +10,8 @@ Employee* EmployeeData:: GetPointer(int i){
         if (i >= 0 && i < _data.size())
             e = _data[i];
         return e;
+}
+int EmployeeData::Export(string fileName){
+    ofstream outFile(fileName);
+    ofstream << _data.
 }

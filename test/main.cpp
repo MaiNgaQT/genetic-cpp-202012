@@ -4,6 +4,10 @@
 #include "libs/json.hpp"
 using namespace std;
 using nlohmann::json;
+void swap (int &a, int &b){
+    a = 7;
+    b = 6;
+}
 int main(){
     // auto a = 5.5;
     // cout << typeid(a).name() << endl;
@@ -46,7 +50,10 @@ int main(){
     
 //    func(4);
 //    cout << "Test lambda expression: m = " << m  << ", n = " << n << endl;
-string str;
-cout << str.max_size();
+    int a = 10;
+    int b = 20;
+    swap(a, b);
+    cout << "a = " << a;
+    cout << "b = " << b;
     return 0;
 }

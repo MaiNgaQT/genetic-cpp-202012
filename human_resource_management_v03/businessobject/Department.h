@@ -2,12 +2,12 @@
 #define project_businessobject_Department_H_
 #include<iostream>
 #include<string>
-#include "..\libs\json.hpp"
+#include "Table.h"
 using namespace std;
-using json = nlohmann::json;
 
-class Department{
+class Department : public Table{
 private:
+    int Id;
     int DID;
     string DName;
     int DNumber;
@@ -15,9 +15,9 @@ private:
     string MGRStartDate;
 public:
     Department();
-    Department(string dName, int dNumber, int mgrSsn, string mgrStartDate);
+    Department(int id, string dName, int dNumber, int mgrSsn, string mgrStartDate);
     string ToString();
-    json ToJson();
     int getDNumber();
+    int GetId();
 };
 #endif
